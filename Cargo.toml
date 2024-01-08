@@ -9,3 +9,5 @@ edition = "2021"
 tui = "0.19.0"
 crossterm = "0.24.0"
 unicode-width = "0.1.11"
+tui-image = "0.1.0"
+

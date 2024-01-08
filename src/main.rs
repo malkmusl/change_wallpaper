@@ -229,12 +229,14 @@ fn ui<B: Backend>(f: &mut Frame<B>, app: &mut App) {
         })
         .collect();
 
+    let title = "Change Wallpaper » ".to_owned() + &app.items.current_path.replace("/home/malkmusl/Pictures/","").replace("/", " » ");
+
     let combined_list = List::new(combined_items)
-        .block(Block::default().borders(Borders::ALL).title("Directories and Files"))
+        .block(Block::default().borders(Borders::ALL).title(title))
         .highlight_style(
             Style::default()
                 .bg(Color::LightGreen)
-                .fg(Color::Black);
+                .fg(Color::Black)
                 .add_modifier(Modifier::BOLD),
         )
         .highlight_symbol(">> ");

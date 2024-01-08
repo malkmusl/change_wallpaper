@@ -1,0 +1,2 @@
+init_path = "$HOME/Pictures/Wallpaper"
+title = "Change Wallpaper » ".to_owned() + &app.items.current_path.replace("$INIT_PATH","").replace("/", " » ");"
